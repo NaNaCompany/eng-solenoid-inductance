@@ -1,0 +1,52 @@
+export const tool = {
+  "id": "E019",
+  "title": "긴 공심 솔레노이드 인덕턴스 계산기",
+  "inputs_text": "감은 수 N [양의 정수], 단면적 A [m²], 코일 길이 l [m]",
+  "formula": "L = μ₀ N² A / l",
+  "output_text": "이상 공심 인덕턴스 L [H]",
+  "assumptions": "A,l>0. 코일 길이가 지름보다 충분히 큰 긴 공심 솔레노이드의 근사다. 철심·포화·프린징·도선 저항은 제외한다.",
+  "purpose": "솔레노이드 인덕턴스 계산 / 코일 권선 초기 검산",
+  "sources": [
+    {
+      "label": "OpenStax · Self-Inductance and Inductors",
+      "url": "https://openstax.org/books/university-physics-volume-2/pages/14-2-self-inductance-and-inductors"
+    }
+  ],
+  "slug": "eng-solenoid-inductance",
+  "category": "전기",
+  "result_label": "긴 공심 코일 인덕턴스 L",
+  "result_dimension": "inductance",
+  "fields": [
+    {
+      "key": "n",
+      "label": "감은 수 N",
+      "dimension": "turns",
+      "example": 1000,
+      "constraint": "integer",
+      "display_unit": "turn",
+      "display_value": "1000"
+    },
+    {
+      "key": "a",
+      "label": "코일 단면적 A",
+      "dimension": "area",
+      "example": 0.0001,
+      "constraint": "positive",
+      "display_unit": "mm2",
+      "display_value": "100"
+    },
+    {
+      "key": "l",
+      "label": "코일 길이 l",
+      "dimension": "length",
+      "example": 0.5,
+      "constraint": "positive",
+      "display_unit": "m",
+      "display_value": "0.5"
+    }
+  ],
+  "site": "https://nanalab.kr/eng-solenoid-inductance/",
+  "repository": "https://github.com/NaNaCompany/eng-solenoid-inductance",
+  "condition": "지름보다 길이가 충분히 큰 공심 솔레노이드 근사 조건을 확인했습니다.",
+  "output_unit": "H"
+};
